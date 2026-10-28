@@ -10,7 +10,7 @@ Le projet suit un cahier des charges en trois phases autour d'une **base de donn
 | **2** | Site Internet *front-office* | Clients | PHP, Laravel / Eloquent | À venir |
 | **3** | Application mobile | Clients / personnel | Android (Java), API REST JSON | À venir |
 
-> Projet réalisé **en binôme** avec Dorian LORON MORRA – septembre à novembre 2026.
+> Projet réalisé **en binôme** avec [Dorian LORON MORRA](https://github.com/airnod) – septembre à novembre 2026.
 
 ![Application – informations de l'hôtel](screenshots/app-hotel.png)
 
@@ -127,6 +127,6 @@ brit-hotel-macon/
 
 **Mouad TOUNANI** – Étudiant en BTS SIO SLAM · [Portfolio](https://emme-mouad.github.io) · [LinkedIn](https://www.linkedin.com/in/mouad-tounani-312a82385/)
 
-Projet co-réalisé avec **Dorian LORON MORRA**.
+Projet co-réalisé avec **Dorian LORON MORRA** ([@airnod](https://github.com/airnod)).
 
 *Projet pédagogique : Brit Hotel est cité uniquement comme contexte de l'exercice.*
