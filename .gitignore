@@ -1,0 +1,14 @@
+# --- Visual Studio / .NET ---
+.vs/
+[Bb]in/
+[Oo]bj/
+packages/
+*.user
+*.suo
+*.cache
+*.pdb
+
+# --- Système ---
+Thumbs.db
+desktop.ini
+.DS_Store

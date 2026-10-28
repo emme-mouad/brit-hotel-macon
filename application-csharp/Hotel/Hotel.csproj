@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BE61F4B7-2C4C-4DE0-8DED-2521EB30C02B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hotel</RootNamespace>
+    <AssemblyName>Hotel</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Isopoh.Cryptography.Argon2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ce4f270b5b22aea9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Isopoh.Cryptography.Argon2.2.0.0\lib\netstandard2.0\Isopoh.Cryptography.Argon2.dll</HintPath>
+    </Reference>
+    <Reference Include="Isopoh.Cryptography.Blake2b, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ce4f270b5b22aea9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Isopoh.Cryptography.Blake2b.2.0.0\lib\netstandard2.0\Isopoh.Cryptography.Blake2b.dll</HintPath>
+    </Reference>
+    <Reference Include="Isopoh.Cryptography.SecureArray, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ce4f270b5b22aea9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Isopoh.Cryptography.SecureArray.2.0.0\lib\netstandard2.0\Isopoh.Cryptography.SecureArray.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="chambre.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Charte.cs" />
+    <Compile Include="client.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="equipement.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAccueil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAccueil.Designer.cs">
+      <DependentUpon>FrmAccueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChambres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChambres.Designer.cs">
+      <DependentUpon>FrmChambres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConnexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConnexion.Designer.cs">
+      <DependentUpon>FrmConnexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFicheClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFicheClient.Designer.cs">
+      <DependentUpon>FrmFicheClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHotel.Designer.cs">
+      <DependentUpon>FrmHotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReservations.Designer.cs">
+      <DependentUpon>FrmReservations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVisualiserClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVisualiserClients.Designer.cs">
+      <DependentUpon>FrmVisualiserClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hotel.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="photo.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reservation.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Varglob.cs" />
+    <EmbeddedResource Include="FrmAccueil.resx">
+      <DependentUpon>FrmAccueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChambres.resx">
+      <DependentUpon>FrmChambres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConnexion.resx">
+      <DependentUpon>FrmConnexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFicheClient.resx">
+      <DependentUpon>FrmFicheClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHotel.resx">
+      <DependentUpon>FrmHotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReservations.resx">
+      <DependentUpon>FrmReservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVisualiserClients.resx">
+      <DependentUpon>FrmVisualiserClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\favicon.ico" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\animaux.png" />
+    <None Include="Resources\bar.png" />
+    <None Include="Resources\climatisation.png" />
+    <None Include="Resources\handicapes.png" />
+    <None Include="Resources\parking.png" />
+    <None Include="Resources\petitdejeuner.png" />
+    <None Include="Resources\piscine.png" />
+    <None Include="Resources\restaurant.png" />
+    <None Include="Resources\sallereunion.png" />
+    <None Include="Resources\wifi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
